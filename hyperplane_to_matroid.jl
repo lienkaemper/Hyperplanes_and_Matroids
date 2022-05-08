@@ -20,5 +20,4 @@ function fromHyperplanes(ha)
     M.n = size(ha, 1)
     M.r = rank(ha)
     return M
-
 end
