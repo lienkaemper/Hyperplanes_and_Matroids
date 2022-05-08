@@ -1,6 +1,5 @@
 include("oriented_matroids.jl")
 
-#-----------Translating Between Different Descriptions-----------------#
 
 function comp_sign(σ, e)
     r = length(σ)

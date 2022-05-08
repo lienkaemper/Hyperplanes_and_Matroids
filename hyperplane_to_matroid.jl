@@ -16,8 +16,10 @@ end
 
 function fromHyperplanes(ha)
     M = OrientedMatroid()
-    M.chirotope = chirotope(ha)
     M.n = size(ha, 1)
     M.r = rank(ha)
+    M.chirotope = chirotope(ha)
+    chirotopeToTopes!(M)
+    chirotopeToCocircuits!(M)
     return M
 end

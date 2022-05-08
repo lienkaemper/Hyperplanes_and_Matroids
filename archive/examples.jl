@@ -17,3 +17,4 @@ n = 5
 cocircuit_supports = [(σ, setdiff(collect(1:n), σ)) for σ in coatoms(h_degen)]
 
 basic_cocircuit(χ_degen, [1; 4],1, 5 )
+fromHyperplanes(h_degen)
