@@ -41,6 +41,7 @@ Base.copy(X::SignVector) = SignVector(copy(X.vec))
 Base.:(==)(X::SignVector, Y::SignVector) = Int.(sign.(X.vec)) == Int.(sign.(Y.vec))
 Base.isequal(X::SignVector, Y::SignVector) = X.vec == Y.vec
 Base.last(X::SignVector) = last(X.vec)
+Base.:*(rr::Real, X::SignVector) = SignVector(Int.(sign.(rr *X.vec)))
 
 function Base.setindex!(X::SignVector, val::Real, i::Int)
     X.vec[i] = Int(sign(val))
